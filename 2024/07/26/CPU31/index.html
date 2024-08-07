@@ -19,12 +19,12 @@
   <meta name="author" content="YLR">
   <meta name="keywords" content="">
   
-    <meta name="description" content="文章目录 1.前言 2.指令表 3.数据通路图 4.数据通路总图 5.控制部件设计 6.代码编写  1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：列出CPU指令表→绘制各个指令的数据流图">
+    <meta name="description" content="1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：列出CPU指令表→绘制各个指令的数据流图→绘制数据流总图→列出指令信号表→编写代码实现CPU基础功能→测试→仿真下板 2.指令表31条指令表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="31指令CPU">
 <meta property="og:url" content="https://ylr9933.github.io/2024/07/26/CPU31/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="文章目录 1.前言 2.指令表 3.数据通路图 4.数据通路总图 5.控制部件设计 6.代码编写  1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：列出CPU指令表→绘制各个指令的数据流图">
+<meta property="og:description" content="1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：列出CPU指令表→绘制各个指令的数据流图→绘制数据流总图→列出指令信号表→编写代码实现CPU基础功能→测试→仿真下板 2.指令表31条指令表">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image.png">
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image-1.png">
@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image-72.png">
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image-73.png">
 <meta property="article:published_time" content="2024-07-26T09:45:17.000Z">
-<meta property="article:modified_time" content="2024-08-07T15:20:52.656Z">
+<meta property="article:modified_time" content="2024-08-07T15:40:04.887Z">
 <meta property="article:author" content="YLR">
 <meta property="article:tag" content="CPU">
 <meta name="twitter:card" content="summary_large_image">
@@ -298,7 +298,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          10k 字
+          9.9k 字
         
       </span>
     
@@ -309,7 +309,7 @@
         
         
         
-          84 分钟
+          83 分钟
         
       </span>
     
@@ -351,15 +351,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ul>
-<li><a href="#1%E5%89%8D%E8%A8%80">1.前言</a></li>
-<li><a href="#2%E6%8C%87%E4%BB%A4%E8%A1%A8">2.指令表</a></li>
-<li><a href="#3%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E5%9B%BE">3.数据通路图</a></li>
-<li><a href="#4%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E6%80%BB%E5%9B%BE">4.数据通路总图</a></li>
-<li><a href="#5%E6%8E%A7%E5%88%B6%E9%83%A8%E4%BB%B6%E8%AE%BE%E8%AE%A1">5.控制部件设计</a></li>
-<li><a href="#6%E4%BB%A3%E7%A0%81%E7%BC%96%E5%86%99">6.代码编写</a></li>
-</ul>
-<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。<br>大致流程如下：列出CPU指令表→绘制各个指令的数据流图→绘制数据流总图→列出指令信号表→编写代码实现CPU基础功能→测试→仿真下板</p>
+                <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。<br>大致流程如下：列出CPU指令表→绘制各个指令的数据流图→绘制数据流总图→列出指令信号表→编写代码实现CPU基础功能→测试→仿真下板</p>
 <h2 id="2-指令表"><a href="#2-指令表" class="headerlink" title="2.指令表"></a>2.指令表</h2><p>31条指令表如下：<br><img src="/../img/CPU31-image.png" srcset="/img/loading.gif" lazyload alt="alt text"><br>其中的指令可以分为三类，分别是：</p>
 <p>R-type:<br>OP为000000,由func来决定他的功能，主要用于操作寄存器之间的算术和逻辑运算。rs和rt是源寄存器，通常存操作数，rd是目标寄存器，通常存结果。shamt代表移位操作中的位移量，是立即数。</p>
 <p>I-type:<br>I型指令都包含了一个立即数（常数），用于与常数相关的计算，观察表发现，I型指令将rd，shamt，func替换为了immediate，因此I型指令由op直接决定，rs作为源寄存器，rd作为目标寄存器。</p>
