@@ -19,12 +19,12 @@
   <meta name="author" content="YLR">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算机组成原理-课程设计-31指令CPU文章目录 1.前言 2.指令表 3.数据通路图 4.数据通路总图 5.控制部件设计 6.代码编写  1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：">
+    <meta name="description" content="文章目录 1.前言 2.指令表 3.数据通路图 4.数据通路总图 5.控制部件设计 6.代码编写  1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：列出CPU指令表→绘制各个指令的数据流图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="31指令CPU">
 <meta property="og:url" content="https://ylr9933.github.io/2024/07/26/CPU31/index.html">
 <meta property="og:site_name" content="个人博客">
-<meta property="og:description" content="计算机组成原理-课程设计-31指令CPU文章目录 1.前言 2.指令表 3.数据通路图 4.数据通路总图 5.控制部件设计 6.代码编写  1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：">
+<meta property="og:description" content="文章目录 1.前言 2.指令表 3.数据通路图 4.数据通路总图 5.控制部件设计 6.代码编写  1.前言本实验中我将使用Verilog HDL语言设计一个31条指令单周期的CPU设计，并完成前仿真、后仿真和下板调试运行。设计CPU是一项繁杂的任务，在此过程中，要明确每一步设计流程，才能减少Debug的时间（改bug怎的很费时间），提高效率。大致流程如下：列出CPU指令表→绘制各个指令的数据流图">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image.png">
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image-1.png">
@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image-72.png">
 <meta property="og:image" content="https://ylr9933.github.io/img/CPU31-image-73.png">
 <meta property="article:published_time" content="2024-07-26T09:45:17.000Z">
-<meta property="article:modified_time" content="2024-08-07T15:14:12.075Z">
+<meta property="article:modified_time" content="2024-08-07T15:20:52.656Z">
 <meta property="article:author" content="YLR">
 <meta property="article:tag" content="CPU">
 <meta name="twitter:card" content="summary_large_image">
@@ -351,7 +351,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="计算机组成原理-课程设计-31指令CPU"><a href="#计算机组成原理-课程设计-31指令CPU" class="headerlink" title="计算机组成原理-课程设计-31指令CPU"></a>计算机组成原理-课程设计-31指令CPU</h1><h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ul>
+                <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><ul>
 <li><a href="#1%E5%89%8D%E8%A8%80">1.前言</a></li>
 <li><a href="#2%E6%8C%87%E4%BB%A4%E8%A1%A8">2.指令表</a></li>
 <li><a href="#3%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF%E5%9B%BE">3.数据通路图</a></li>
@@ -552,9 +552,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/26/dp/" title="动态规划">
+                      <a href="/2024/07/26/dp/" title="买卖股票的最佳时机（dp问题）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">动态规划</span>
+                        <span class="hidden-mobile">买卖股票的最佳时机（dp问题）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
