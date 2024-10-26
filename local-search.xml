@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>hexo如何发布文章</title>
+    <link href="/2024/10/26/hexo%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/"/>
+    <url>/2024/10/26/hexo%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="如何新建文章"><a href="#如何新建文章" class="headerlink" title="如何新建文章"></a>如何新建文章</h2><p>进入博客对应的文件夹，打开gitbash，输入以下指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs git">hexo new &#x27;文章标题&#x27;<br></code></pre></td></tr></table></figure><p>接着会在&#x2F;source&#x2F;_posts下生成文章，接下来可以用vscode等编辑器编辑md格式的文章</p><p>当然也可以在&#x2F;source&#x2F;_posts下直接新建md文件用于编辑文章，注意编辑文件头</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs md">---<br>title: hexo如何发布文章<br>date: 2024-10-26 17:34:23<br>tags:<br><span class="hljs-bullet">-</span> git<br>categories: <br><span class="hljs-section">- 杂项</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure><p>其中title 为文章标题，date 为文章创建时间，tags 为文章标签，categories 为文章分类。</p><h2 id="如何在博客中显示文章"><a href="#如何在博客中显示文章" class="headerlink" title="如何在博客中显示文章"></a>如何在博客中显示文章</h2><p>我的博客部署在github上，在新建文章之后输入指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs git">git add .<br>git commit . -m &#x27;message内容&#x27;<br></code></pre></td></tr></table></figure><p>这是将你本地的更新全部推送到暂存区和本地仓库，所以确保你知道自己在干什么！！！<br>接下来输入以下指令，就能在你的网站中看到自己的文章啦</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs git">hexo clean<br>hexo generate<br>hexo deploy<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>杂项</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>个人网页展示</title>
     <link href="/2024/08/07/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA/"/>
     <url>/2024/08/07/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA/</url>
